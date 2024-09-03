@@ -1,0 +1,126 @@
+body {
+  background-color: rgb(255, 255, 255);
+  color:rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cell {
+  font-size: 2.5em;
+  width: 2em;
+  height: 2em;
+}
+
+.board {
+  border-collapse: collapse; /* Removes gaps between cells */
+}
+
+.board td {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #90c431;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #dbf6c4; /* Background color for the cells */
+}
+
+.score-text {
+  background-color: #ececec; /* Button background color */
+  color: #777777; /* Button text color */
+  font-size: 1.5em; /* Increase font size */
+  padding: 10px 20px; /* Add padding around the text */
+  border-radius: 0px; /* Rounded corners */
+  text-align: center; /* Center the text */
+  display: inline-block; /* Prevents the background from stretching the full width */
+  margin: 20px auto; /* Centers the score horizontally */
+}
+
+.button {
+  display: inline-block; /* Prevents the button from stretching across the screen */
+  width: 150px; /* Set a specific width for the button */
+  padding: 10px 20px; /* Adds some padding for a better look */
+  font-size: 1em; /* Increases the font size for visibility */
+  background-color: #ececec; /* Button background color */
+  color: #777777; /* Button text color */
+  border: none; /* Removes border */
+  border-radius: 0px; /* Adds rounded corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  margin: 0px auto; /* Centers the button horizontally */
+  text-align: center; /* Ensures the text is centered inside the button */
+}
+
+button:hover {
+  background-color: #e4e4e4; /* Lighter shade on hover */
+}
+
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(254, 0, 0);
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  border: 0px solid #fff;
+  border-radius: 10px;
+  display: none; /* Hidden by default */
+  z-index: 10; /* Ensures it appears above other elements */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 80%; /* Adjusts the width of the message */
+  max-width: 400px; /* Set a maximum width */
+}
+
+.game-over2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(254, 0, 0);
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  border: 0px solid #fff;
+  border-radius: 10px;
+  display: none; /* Hidden by default */
+  z-index: 10; /* Ensures it appears above other elements */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 80%; /* Adjusts the width of the message */
+  max-width: 400px; /* Set a maximum width */
+}
+
+.won {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(1, 104, 56);
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  border: 0px solid #fff;
+  border-radius: 10px;
+  display: none; /* Hidden by default */
+  z-index: 10; /* Ensures it appears above other elements */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 80%; /* Adjusts the width of the message */
+  max-width: 400px; /* Set a maximum width */
+}
+
+.board-container {
+  position: relative; /* Ensures .game-over is positioned relative to this */
+  display: inline-block; /* Shrinks container to the size of its content */
+  margin: 0px auto; /* Centers the container horizontally */
+  border: 5px solid #ffffff; /* Optional: Adds a border around the game board */
+  background-color: #ffffff; /* Optional: Background color for the game board */
+  width: 100%; /* Make sure the container width adjusts */
+  max-width: 600px; /* Set a maximum width */
+  aspect-ratio: 1; /* Maintain aspect ratio */
+}

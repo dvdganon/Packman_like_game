@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pacman</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+
+  <body onload="onLoad()" onkeyup="onMovePacman(event)">
+    <h2 class="score-text">Score: <span class="score">0</span></h2>
+
+    <div class="board-container">
+      <table class="board">
+        <tbody></tbody>
+      </table>
+      <div class="game-over">GAME OVER: You become food for the Volture 🍗</div>
+      <div class="game-over2">
+        GAME OVER: You went directly into the Volture's mouth 🍖
+      </div>
+      <div class="won">YOU WON: You become a Rooster 🐓</div>
+    </div>
+
+    <button class="button" onclick="onInit()">Re/Start</button>
+
+    <script src="js/utils.js"></script>
+    <script src="js/pacman.js"></script>
+    <script src="js/ghost.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
