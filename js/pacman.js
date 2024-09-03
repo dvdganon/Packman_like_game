@@ -36,7 +36,7 @@ function onMovePacman(ev) {
         const nextLocation = getNextLocation(ev.code)
         const nextCell = gBoard[nextLocation.i][nextLocation.j]
     }
-    if (nextCell === FOOD && gGame.score === 19) {
+    if (nextCell === FOOD && gGame.score === 39) {
         PACMAN = '🐓'
         const nextLocation = getNextLocation(ev.code)
         const nextCell = gBoard[nextLocation.i][nextLocation.j]
@@ -45,12 +45,11 @@ function onMovePacman(ev) {
     if (nextCell === FOOD) updateScore(1)
 
     if (nextCell === SUPER_FOOD) {
-        gPacman.isSuper = true
+    isSuper(timestamp)
     const nextLocation = getNextLocation(ev.code)
     const nextCell = gBoard[nextLocation.i][nextLocation.j]
     }
     
-
 
 
     // DONE: moving from current location:

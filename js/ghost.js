@@ -61,12 +61,15 @@ function moveGhost(ghost) {
     // DONE: return if cannot move
     if (nextCell === WALL) return
     if (nextCell === GHOST) return
+    if (nextCell === PACMAN && gPacman.isSuper === true) return
     // DONE: hitting a pacman? call gameOver
     if (nextCell === PACMAN) {
-        GHOST = '🍖'
+        GHOST = '🍗'
         const nextCell = gBoard[nextLocation.i][nextLocation.j]
         gameOver()
     }
+
+
 
     // DONE: moving from current location:
     // DONE: update the model (restore prev cell contents)

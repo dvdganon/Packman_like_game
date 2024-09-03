@@ -4,7 +4,7 @@ const WALL = '🌻'
 const FOOD = '🫐'
 const EMPTY = '💩'
 const SUPER_FOOD = "🍄"
-
+var timestamp = Date.now();
 
 const gGame = {
     score: 0,
@@ -104,7 +104,6 @@ function updateScore(diff) {
 function gameOver() {
     console.log('Game Over')
     clearInterval(gIntervalGhosts)
-    // renderCell(gPacman.location, '🍗')
     const gameOverEl = document.querySelector('.game-over');
     gameOverEl.style.display = 'block';
     gGame.isOn = false
@@ -113,7 +112,6 @@ function gameOver() {
 function gameOver2() {
     console.log('Game Over2')
     clearInterval(gIntervalGhosts)
-    // renderCell(gPacman.location, '🍗')
     const gameOver2El = document.querySelector('.game-over2');
     gameOver2El.style.display = 'block';
     gGame.isOn = false
@@ -123,9 +121,13 @@ function gameOver2() {
 function won(){
     console.log('Won')
     clearInterval(gIntervalGhosts)
-    // renderCell(gPacman.location, '🐓')
     const wonEl = document.querySelector('.won');
     wonEl.style.display = 'block';
     gGame.isOn = false
 
+}
+
+function isSuper(timestamp) {
+gPacman.isSuper = true
+setTimeout(() => gPacman.isSuper = false, 5000)
 }
