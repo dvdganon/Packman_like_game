@@ -129,6 +129,7 @@ function won(){
 
 function isSuper(timestamp) {
 gPacman.isSuper = true
-setTimeout(() => gPacman.isSuper = false, 5000)
 PACMAN = '🐓'
+setTimeout(() => gPacman.isSuper = false, 5000)
+setTimeout(() => PACMAN = '🐤', 5000)
 }

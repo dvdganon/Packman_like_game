@@ -36,7 +36,7 @@ function onMovePacman(ev) {
         const nextLocation = getNextLocation(ev.code)
         const nextCell = gBoard[nextLocation.i][nextLocation.j]
     }
-    if (nextCell === FOOD && gGame.score === 39) {
+    if (nextCell === FOOD && gGame.score === 55) {
         PACMAN = '🐓'
         const nextLocation = getNextLocation(ev.code)
         const nextCell = gBoard[nextLocation.i][nextLocation.j]
